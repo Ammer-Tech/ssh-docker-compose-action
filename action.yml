@@ -33,6 +33,10 @@ inputs:
   compose_plugin:
     description: Use compose plugin if "true".
     default: "false"
+  registry_user:
+    description: Docker registry username
+  registry_password:
+    description: Docker registry password
 runs:
   using: docker
   image: Dockerfile
@@ -46,3 +50,6 @@ runs:
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
     PULL: ${{ inputs.pull }}
     COMPOSE_PLUGIN: ${{ inputs.compose_plugin }}
+    REGISTRY_USER: ${{ inputs.registry_user }}
+    REGISTRY_PASSWORD: ${{ inputs.registry_password }}
+    
