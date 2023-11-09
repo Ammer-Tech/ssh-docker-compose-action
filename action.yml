@@ -39,6 +39,8 @@ inputs:
     description: Docker registry password
   docker_registry:
     description: Docker registry URL
+  aws_default_region:
+    description: AWS region
 runs:
   using: docker
   image: Dockerfile
@@ -55,4 +57,5 @@ runs:
     REGISTRY_USER: ${{ inputs.registry_user }}
     REGISTRY_PASSWORD: ${{ inputs.registry_password }}
     DOCKER_REGISTRY: ${{ inputs.docker_registry }}
+    AWS_DEFAULT_REGION: ${{ inputs.aws_default_region }}
     
