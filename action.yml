@@ -37,6 +37,8 @@ inputs:
     description: Docker registry username
   registry_password:
     description: Docker registry password
+  docker_registry:
+    description: Docker registry URL
 runs:
   using: docker
   image: Dockerfile
@@ -52,4 +54,5 @@ runs:
     COMPOSE_PLUGIN: ${{ inputs.compose_plugin }}
     REGISTRY_USER: ${{ inputs.registry_user }}
     REGISTRY_PASSWORD: ${{ inputs.registry_password }}
+    DOCKER_REGISTRY: ${{ inputs.docker_registry }}
     
